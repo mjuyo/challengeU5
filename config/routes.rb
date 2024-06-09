@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  root 'products#index'
+  
+  # Replaced by resources
+  #get "/products", to: "products#index"
+  #get "/products/:id", to: "products#show"
+  
+  resources :products
+  
   get 'products/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -8,4 +16,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
 end
