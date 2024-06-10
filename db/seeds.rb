@@ -36,7 +36,7 @@ products = CSV.parse(csv_data, headers: true)
 
 # Loop through each product
 products.each do |product|
-    category_name = product['category_name']
+    category_name = product['category']
 
     category = Category.find_or_create_by(name: category_name)
 
@@ -44,7 +44,7 @@ products.each do |product|
         title: product['name'],
         price: product['price'],
         description: product['description'],
-        stock_quantity: ['stock quantity'],
+        stock_quantity: product['stock quantity'],
         category: category
     )
 end
