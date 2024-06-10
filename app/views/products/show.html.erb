@@ -1,6 +1,8 @@
 <h1><%= @product.title %></h1>
 
 <p>Price: <%= @product.price %></p>
+<p>Description: <%= @product.description %></p>
 <p>Stock: <%= @product.stock_quantity %></p>
+<p>Category: <%= @product.category.name %>
 
 <%= link_to "Back", products_path %>
